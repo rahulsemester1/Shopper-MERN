@@ -18,6 +18,7 @@ function LoginSignup() {
     email:"",
     password:"",
   })
+  const url="https://shopper-mern-backend.onrender.com";
 
   const handleChange=(e)=>{
     setuserInfo({...userInfo,[e.target.name]:e.target.value}) 
@@ -28,7 +29,7 @@ function LoginSignup() {
   const signup=async()=>{
     try{
     console.log("signup",userInfo);
-    const response=await axios.post("http://localhost:4000/api/v1/auth/signup",userInfo) 
+    const response=await axios.post(`${url}/api/v1/auth/signup`,userInfo) 
     if(response?.data.success===true){
       alert("Signup Successfully")
       console.log(response)
@@ -47,7 +48,7 @@ function LoginSignup() {
   //Login
   const login=async()=>{
     try{
-      const response=await axios.post("http://localhost:4000/api/v1/auth/login",userInfo) 
+      const response=await axios.post(`${url}/api/v1/auth/login`,userInfo) 
       if(response?.data.success===true){
         alert("Login Successfully")
         setName(response.data.response);

@@ -7,7 +7,7 @@ import cross_icon from "../assets/cross_icon.png"
 const ListProduct = () => {
   const [products,setProducts]=useState([])
   const [loading,setLoading]=useState(true)
-  const url="https://shopper-mern.onrender.com";
+  const url="https://shopper-mern-backend.onrender.com";
 
   const fetchData=async()=>{
     try{

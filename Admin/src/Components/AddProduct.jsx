@@ -13,6 +13,7 @@ const AddProduct = () => {
       old_price:"",
       new_price:"",
    })
+    const url="https://shopper-mern.onrender.com";
 
    const addProductValue=(e)=>{
       setProduct_detail({...product_detail,[e.target.name]:e.target.value})
@@ -28,13 +29,13 @@ const AddProduct = () => {
       let formData=new FormData();
       formData.append("product",image);
       try{
-      const response=await axios.post("http://localhost:4000/api/v1/upload",formData,   
+      const response=await axios.post(`${url}/api/v1/upload`,formData,   
    )
 
       if(response){
          console.log(response);
          product_detail.image=response.data.imageUrl;
-         const apiData=await axios.post("http://localhost:4000/api/v1/users/add",product_detail)
+         const apiData=await axios.post(`${url}/api/v1/users/add`,product_detail)
          apiData?alert("Product added"):alert("Failed");
            
                setProduct_detail({

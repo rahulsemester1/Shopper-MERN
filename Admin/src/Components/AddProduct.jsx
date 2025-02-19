@@ -13,7 +13,7 @@ const AddProduct = () => {
       old_price:"",
       new_price:"",
    })
-    const url="https://shopper-mern.onrender.com";
+    const url="https://shopper-mern-backend.onrender.com";
 
    const addProductValue=(e)=>{
       setProduct_detail({...product_detail,[e.target.name]:e.target.value})

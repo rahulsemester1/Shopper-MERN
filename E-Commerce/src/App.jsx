@@ -75,14 +75,14 @@ function App() {
        <Route path="/product/:productId" element={<Product/>}/>
        
        {/* Protected Route */}
-       <Route path="/login" element={<ProtectedRoute>
+{/*        <Route path="/login" element={<ProtectedRoute>
           <LoginSignup/>
         </ProtectedRoute> }/>
        
        <Route path="/cart" element={<Cart/>}/>
       </Route>
     </Routes>
-  </Router> */}
+  </Router> */} */}
     
       
     </>

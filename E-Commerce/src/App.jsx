@@ -19,8 +19,6 @@ const ProtectedRoute = lazy(() =>import("./Protected_Routes/ProtectedRoute.jsx")
 // import men_banner from "./assets/banner_mens.png"
 // import women_banner from "./assets/banner_women.png"
 // import kids_banner from "./assets/banner_kids.png"
-
-import ProtectedRoute from "./Protected_Routes/ProtectedRoute.jsx"
 import "./index.css";
 
 function App() {
